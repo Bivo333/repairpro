@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ремонт и отделка помещений</title>
+    <title>РемонтПрофи | Качественная отделка квартир</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="logo">РемонтПрофи</div>
+        <div class="logo">Ремонт<span>Профи</span></div>
         <nav>
-            <a href="#">Услуги</a>
-            <a href="#">Портфолио</a>
-            <a href="#">Цены</a>
-            <button class="btn-primary">Связаться</button>
+            <a href="#services">Услуги</a>
+            <a href="#prices">Цены</a>
+            <a href="#portfolio">Работы</a>
+            <button class="btn-primary">Заказать звонок</button>
         </nav>
     </header>
 
@@ -23,84 +23,104 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Превращаем бетон в уютный дом</h1>
-                <p>Профессиональные ремонтно-отделочные работы любой сложности с гарантией до 3 лет.</p>
-                <button class="btn-cta">Узнать стоимость</button>
+                <p>Профессиональные ремонтно-отделочные работы любой сложности с гарантией до 3 лет и четким соблюдением сметы.</p>
+                <div class="hero-btns">
+                    <button class="btn-cta">Узнать стоимость</button>
+                    <button class="btn-secondary">Наши работы</button>
+                </div>
             </div>
             <div class="hero-image">
-                <div class="image-placeholder"></div>
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Современный интерьер">
             </div>
         </section>
 
-        <section class="features">
+        <section id="services" class="features">
             <div class="card">
+                <div class="icon">🏗️</div>
                 <h3>Качество</h3>
-                <p>Используем только проверенные материалы и современное оборудование.</p>
+                <p>Используем только проверенные материалы и современное немецкое оборудование.</p>
             </div>
             <div class="card">
+                <div class="icon">⏱️</div>
                 <h3>Сроки</h3>
-                <p>Четкое соблюдение графика работ, прописанного в договоре.</p>
+                <p>Прописываем штрафы за просрочку в договоре. Сдаем объекты вовремя.</p>
             </div>
             <div class="card">
+                <div class="icon">🛡️</div>
                 <h3>Гарантия</h3>
-                <p>Мы несем ответственность за результат и исправляем огрехи бесплатно.</p>
+                <p>Несем полную материальную ответственность в течение 36 месяцев после сдачи.</p>
             </div>
         </section>
 
-            <section class="pricing">
-    <h2>Стоимость работ</h2>
-    <div class="price-grid">
-        <div class="price-item">
-            <span>Косметический ремонт</span>
-            <strong>от $50 / м²</strong>
-        </div>
-        <div class="price-item">
-            <span>Капитальный ремонт</span>
-            <strong>от $120 / м²</strong>
-        </div>
-        <div class="price-item">
-            <span>Дизайнерский ремонт</span>
-            <strong>от $250 / м²</strong>
-        </div>
-    </div>
-</section>
+        <section id="prices" class="pricing">
+            <h2>Прозрачная стоимость</h2>
+            <div class="price-grid">
+                <div class="price-item">
+                    <span>Косметический ремонт</span>
+                    <strong>от $50 / м²</strong>
+                    <ul>
+                        <li>Покраска стен</li>
+                        <li>Укладка ламината</li>
+                    </ul>
+                </div>
+                <div class="price-item featured">
+                    <span>Капитальный ремонт</span>
+                    <strong>от $120 / м²</strong>
+                    <ul>
+                        <li>Замена электрики</li>
+                        <li>Выравнивание стен</li>
+                    </ul>
+                </div>
+                <div class="price-item">
+                    <span>Дизайнерский ремонт</span>
+                    <strong>от $250 / м²</strong>
+                    <ul>
+                        <li>Проект под ключ</li>
+                        <li>Авторский надзор</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<section class="portfolio">
-    <h2>Наши проекты</h2>
-    <div class="gallery">
-        <div class="gallery-item"><img src="https://via.placeholder.com/400x300" alt="Ремонт 1"></div>
-        <div class="gallery-item"><img src="https://via.placeholder.com/400x300" alt="Ремонт 2"></div>
-        <div class="gallery-item"><img src="https://via.placeholder.com/400x300" alt="Ремонт 3"></div>
-    </div>
-</section>
+        <section id="portfolio" class="portfolio">
+            <h2>Наши выполненные проекты</h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556912177-f517a127d79b?q=80&w=600&auto=format&fit=crop" alt="Кухня"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop" alt="Ванная"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=600&auto=format&fit=crop" alt="Спальня"></div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <h2>Что говорят клиенты</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <p>"Сделали ремонт в двушке за 2 месяца. Качество швов на плитке — идеальное! Рекомендую."</p>
+                    <span class="author">— Александр, ЖК «Солнечный»</span>
+                </div>
+                <div class="review-card">
+                    <p>"Очень вежливая бригада, мусор за собой всегда вывозили. Дизайнер был всегда на связи."</p>
+                    <span class="author">— Мария, частный дом</span>
+                </div>
+            </div>
+        </section>
     </main>
-<section class="reviews">
-    <h2>Что говорят клиенты</h2>
-    <div class="reviews-container">
-        <div class="review-card">
-            <p>"Сделали ремонт в двушке за 2 месяца. Качество швов на плитке — идеальное!"</p>
-            <span class="author">— Александр, ЖК «Солнечный»</span>
-        </div>
-        <div class="review-card">
-            <p>"Очень вежливая бригада, мусор за собой вывезли. Рекомендую!"</p>
-            <span class="author">— Мария, частный дом</span>
-        </div>
-    </div>
-</section>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-info">
-            <h3>РемонтПрофи</h3>
-            <p>Создаем интерьеры, в которых хочется жить.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Ремонт<span>Профи</span></h3>
+                <p>Создаем интерьеры, в которых хочется жить.</p>
+            </div>
+            <div class="footer-contacts">
+                <p>Email: hello@remontpro.ru</p>
+                <p>Тел: +7 (999) 000-00-00</p>
+            </div>
         </div>
-        <div class="footer-contacts">
-            <p>Email: info@remontpro.ru</p>
-            <p>Тел: +7 (999) 000-00-00</p>
+        <div class="footer-bottom">
+            &copy; 2026 РемонтПрофи. Сделано с любовью.
         </div>
-    </div>
-    <div class="footer-bottom">
-        &copy; 2026 РемонтПрофи. Все права защищены.
-    </div>
-</footer>
+    </footer>
+
 </body>
 </html>
