@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | РемонтПрофи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Ремонт<span>Профи</span></div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="portfolio.html">Портфолио</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+
+    <main style="padding: 100px 8%;">
+        <h1 style="text-align: center; margin-bottom: 50px;">Свяжитесь с нами</h1>
+        
+        <div style="display: flex; gap: 50px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Наш офис</h2>
+                <p>г. Москва, ул. Строителей, д. 25, офис 410</p>
+                
+                <h2 style="margin-top: 30px;">Телефон</h2>
+                <p style="font-size: 1.5rem; color: var(--accent); font-weight: bold;">+7 (999) 000-00-00</p>
+                
+                <h2 style="margin-top: 30px;">Режим работы</h2>
+                <p>Пн-Сб: 09:00 — 20:00<br>Вс: Выходной</p>
+            </div>
+
+            <div class="card" style="flex: 1; min-width: 300px;">
+                <h2>Оставить заявку</h2>
+                <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <input type="text" placeholder="Ваше имя" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+                    <input type="tel" placeholder="Номер телефона" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+                    <textarea placeholder="Что нужно отремонтировать?" rows="4" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;"></textarea>
+                    <button type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
