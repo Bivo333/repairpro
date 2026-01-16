@@ -20,8 +20,8 @@ body {
     line-height: 1.6;
 }
 
-/* Навигация */
-.navbar {
+/* --- HEADER --- */
+.site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,24 +42,49 @@ body {
     color: var(--accent);
 }
 
-nav a {
+.nav .nav-link {
     color: var(--text-light);
     text-decoration: none;
-    margin-right: 25px;
+    margin-right: 15px;
     font-size: 0.9rem;
+    padding: 8px 16px;
     transition: 0.3s;
+    border-radius: 6px;
 }
 
-nav a:hover {
+/* Стиль активной страницы (через JS) */
+.nav .nav-link.active {
+    background-color: var(--accent);
+    color: #fff !important;
+}
+
+.nav .nav-link:hover:not(.active) {
     color: var(--accent);
 }
 
-/* Главный блок */
+.btn-primary {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* --- HERO SECTION --- */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 8% 120px 8%;
+    padding: 80px 8% 120px 8%;
     background-color: var(--bg-dark);
     color: var(--text-light);
     border-bottom-left-radius: 60px;
@@ -106,41 +131,17 @@ nav a:hover {
     transition: 0.3s;
 }
 
-.btn-primary {
+.btn-secondary {
     background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    padding: 10px 20px;
-    border-radius: 10px;
+    border: 2px solid #555;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Добавьте это к вашим прошлым стилям или замените файл */
-.gallery-item img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: transform 0.4s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.gallery-item img:hover {
-    transform: scale(1.03);
-}
-
-.portfolio-page {
-    padding: 80px 8%;
-    text-align: center;
-}
-
-.gallery-item p {
-    margin-top: 15px;
-    font-weight: 600;
-    color: #444;
-}
-
-/* Карточки услуг */
+/* --- FEATURES / CARDS --- */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,7 +168,7 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* Цены */
+/* --- PRICING --- */
 .pricing {
     padding: 80px 8%;
     text-align: center;
@@ -192,6 +193,7 @@ nav a:hover {
 .price-item.featured {
     border: 2px solid var(--accent);
     transform: scale(1.05);
+    z-index: 2;
 }
 
 .price-item strong {
@@ -207,10 +209,11 @@ nav a:hover {
     color: #666;
 }
 
-/* Портфолио */
+/* --- PORTFOLIO --- */
 .portfolio {
     padding: 60px 8%;
     background: white;
+    text-align: center;
 }
 
 .gallery {
@@ -225,9 +228,14 @@ nav a:hover {
     height: 300px;
     object-fit: cover;
     border-radius: 20px;
+    transition: 0.3s;
 }
 
-/* Отзывы */
+.gallery-item img:hover {
+    transform: scale(1.02);
+}
+
+/* --- REVIEWS --- */
 .reviews {
     padding: 80px 8%;
     text-align: center;
@@ -250,24 +258,64 @@ nav a:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Футер */
-.footer {
-    background: var(--bg-dark);
-    color: white;
-    padding: 60px 8% 20px 8%;
+/* --- FOOTER В СТИЛЕ МАКЕТА --- */
+.site-footer {
+    background-color: #121214; /* Глубокий черный цвет */
+    color: #ffffff;
+    padding: 60px 8% 30px 8%;
+    font-family: 'Inter', sans-serif;
 }
 
-.footer-content {
+.footer-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Разносит контент по краям */
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-brand .tagline {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer-contacts {
+    text-align: left;
+}
+
+.footer-contacts p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.footer-contacts a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contacts a:hover {
+    color: var(--accent);
+}
+
+/* Тонкая разделительная линия */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    margin-bottom: 25px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #333;
-    margin-top: 40px;
-    padding-top: 20px;
     text-align: center;
-    color: #777;
+    color: #888888;
+    font-size: 0.85rem;
 }

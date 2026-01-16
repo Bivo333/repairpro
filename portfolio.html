@@ -9,17 +9,19 @@
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="site-header">
         <div class="logo">Ремонт<span>Профи</span></div>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="services.html">Услуги</a>
-            <a href="portfolio.html">Портфолио</a>
-            <a href="contacts.html">Контакты</a>
-            <a href="contacts.html"><button class="btn-primary">Заказать звонок</button></a>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="services.html" class="nav-link">Услуги</a>
+            <a href="portfolio.html" class="nav-link">Портфолио</a>
+            <a href="contacts.html" class="nav-link">Контакты</a>
         </nav>
+        <a href="contacts.html">
+            <button class="btn-primary">Заказать звонок</button>
+        </a>
     </header>
-
+    
     <main style="padding: 80px 8%;">
         <h1 style="text-align: center; margin-bottom: 40px;">Реализованные объекты</h1>
         <div class="gallery" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
@@ -41,6 +43,25 @@
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">РемонтПрофи</div>
+                <p class="tagline">Создаем интерьеры, в которых хочется жить.</p>
+            </div>
+            <div class="footer-contacts">
+                <p>Email: <a href="mailto:hallo@kaiser.de">hallo@kaiser.de</a></p>
+                <p>Тел: <a href="tel:+4901234567890">+49 (0123) 456-78-90</a></p>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 РемонтПрофи. Сделано с любовью.</p>
+        </div>
+    </footer>
+      
+    <script src="js/active-link.js" defer></script>
 </body>
 
 </html>
