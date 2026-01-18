@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. ОБЩИЕ СТИЛИ И ПЕРЕМЕННЫЕ
+   ========================================================================== */
 :root {
     --bg-dark: #121214;
     --card-bg: #ffffff;
@@ -20,8 +23,23 @@ body {
     line-height: 1.6;
 }
 
-/* --- HEADER --- */
-.site-header {
+/* ==========================================================================
+   2. HEADER (ИСПРАВЛЕННЫЙ)
+   ========================================================================== */
+
+   /* Резервируем место под шапку, чтобы контент не прыгал вверх-вниз */
+#header-placeholder {
+    display: block;
+    width: 100%;
+    /* Укажи высоту, которая совпадает с твоей шапкой (обычно 70-90px) */
+    min-height: 80px; 
+    background-color: var(--bg-dark); /* Закрашиваем фон сразу */
+    
+    /* Опционально: можно добавить легкую анимацию появления */
+    transition: all 0.3s ease;
+}
+
+   .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,29 +51,53 @@ body {
     z-index: 1000;
 }
 
+/* Этот контейнер важен для выравнивания кнопки и языков */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Расстояние между кнопкой и языками */
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .logo span {
     color: var(--accent);
 }
 
+/* Цвет для первой части: Ремонт / Repair / Reparatur */
+.logo span:first-child {
+    color: #ffffff;
+/*    margin-right: 2px; /* небольшой отступ между словами, если нужно */
+}
+
+/* Цвет для второй части: Профи / Pro / Profi */
+.logo span:last-child {
+    color: #ff6b35;
+}
+
+.nav {
+    display: flex;
+    /* Убрал margin-right у ссылок, использую gap для контроля */
+    gap: 5px;
+}
+
 .nav .nav-link {
-    position: relative; /* КРИТИЧНО: удерживает линию внутри ссылки */
+    position: relative;
     color: var(--text-light);
     text-decoration: none;
-    margin-right: 15px;
     font-size: 0.9rem;
     padding: 8px 16px;
     font-weight: 500;
     border-radius: 8px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-block; 
+    display: inline-block;
 }
 
-/* Стиль активной страницы */
 .nav .nav-link.active {
     background-color: transparent;
     color: var(--accent) !important;
@@ -63,33 +105,33 @@ body {
     cursor: default;
 }
 
-/* Линия под активной ссылкой */
 .nav .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: 0;         /* Прижали к самому низу */
-    left: 16px;        /* Начало линии совпадает с текстом (отступ padding) */
-    right: 16px;       /* Конец линии совпадает с текстом */
+    bottom: 0;
+    left: 16px;
+    right: 16px;
     height: 2px;
     background-color: var(--accent);
     border-radius: 2px;
 }
 
-/* Наведение для неактивных ссылок */
 .nav .nav-link:hover:not(.active) {
     color: var(--accent);
-    background-color: rgba(255, 107, 0, 0.05); 
-    transform: translateY(-2px); /* Чуть заметнее подъем */
+    background-color: rgba(255, 107, 0, 0.05);
+    transform: translateY(-2px);
 }
 
-/* Эффект нажатия */
 .nav .nav-link:active {
     transform: translateY(0);
     filter: brightness(0.9);
 }
 
-/* Общие правила анимации для всех кнопок */
-.btn-primary, .btn-secondary {
+/* ==========================================================================
+   3. КНОПКИ (ТВОИ СТИЛИ)
+   ========================================================================== */
+.btn-primary,
+.btn-secondary {
     background-color: transparent;
     color: var(--accent);
     border: 2px solid #555;
@@ -100,8 +142,8 @@ body {
     outline: none;
 }
 
-/* Общая анимация при наведении */
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
     background-color: var(--accent);
     color: white;
     border-color: var(--accent);
@@ -109,22 +151,14 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Эффект при нажатии для обеих кнопок */
-.btn-primary:active, .btn-secondary:active {
-    /* Кнопка почти возвращается на поверхность */
-    transform: translateY(-1px); 
-    
-    /* Тень уменьшается, имитируя физический контакт с фоном */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    
-    /* Слегка затемняем, чтобы кнопка выглядела "нажатой" */
-    filter: brightness(0.9); 
-    
-    /* Делаем возврат быстрым для тактильного ощущения */
-    transition: all 0.1s; 
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.9);
+    transition: all 0.1s;
 }
 
-/* И только размеры прописать отдельно */
 .btn-primary {
     padding: 10px 24px;
     border-radius: 8px;
@@ -135,11 +169,13 @@ body {
     border-radius: 12px;
 }
 
+/* ==========================================================================
+   4. ЯЗЫКИ (LANG SWITCHER)
+   ========================================================================== */
 .lang-switcher {
     display: flex;
     align-items: center;
-    margin-right: 20px; /* Отступ от кнопки заказа */
-    background: rgba(255, 255, 255, 0.03); /* Едва заметная подложка */
+    background: rgba(255, 255, 255, 0.03);
     padding: 4px 10px;
     border-radius: 20px;
 }
@@ -150,18 +186,13 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
     transition: all 0.2s ease;
-    opacity: 0.6; /* Неактивные языки чуть приглушены */
+    opacity: 0.6;
 }
 
-.lang-link:hover {
+.lang-link:hover,
+.lang-link.active {
     opacity: 1;
     color: var(--accent);
-}
-
-.lang-link.active {
-    color: var(--accent) !important;
-    opacity: 1;
-    pointer-events: none;
 }
 
 .lang-divider {
@@ -171,7 +202,9 @@ body {
     user-select: none;
 }
 
-/* --- HERO SECTION --- */
+/* ==========================================================================
+   5. HERO СЕКЦИЯ
+   ========================================================================== */
 .hero {
     display: flex;
     align-items: center;
@@ -220,23 +253,19 @@ body {
     font-weight: 600;
     cursor: pointer;
     margin-right: 15px;
-    
-    /* Улучшенная плавность и подготовка к эффектам */
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    overflow: hidden; /* Важно для эффекта блика */
+    overflow: hidden;
     display: inline-block;
     box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
 }
 
-/* Эффект при наведении */
 .btn-cta:hover {
-    transform: translateY(-4px) scale(1.02); /* Кнопка всплывает и чуть увеличивается */
-    filter: brightness(1.1); /* Становится сочнее */
-    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4); /* Тень становится глубже */
+    transform: translateY(-4px) scale(1.02);
+    filter: brightness(1.1);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
 }
 
-/* Анимация Блика (Shine effect) */
 .btn-cta::after {
     content: '';
     position: absolute;
@@ -244,26 +273,22 @@ body {
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(
-        to right, 
-        transparent, 
-        rgba(255, 255, 255, 0.4), 
-        transparent
-    );
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4), transparent);
     transform: skewX(-25deg);
     transition: 0.5s;
 }
 
 .btn-cta:hover::after {
-    left: 150%; /* Блик пролетает сквозь кнопку */
+    left: 150%;
 }
 
-/* Реакция на нажатие */
 .btn-cta:active {
-    transform: translateY(-1px) scale(0.98); /* Кнопка слегка сжимается */
+    transform: translateY(-1px) scale(0.98);
 }
 
-/* --- FEATURES / CARDS --- */
+/* ==========================================================================
+   6. КАРТОЧКИ И ПРАЙС
+   ========================================================================== */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -290,7 +315,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* --- PRICING --- */
 .pricing {
     padding: 80px 8%;
     text-align: center;
@@ -310,19 +334,15 @@ body {
     flex: 1;
     min-width: 250px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    /* Добавляем прозрачную рамку заранее, чтобы ничего не прыгало */
-    border: 2px solid transparent; 
-    
-    /* Плавный переход для всех изменений */
-    transition: all 0.3s ease; 
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
-/* 2. Рамка при наведении на ЛЮБОЙ пункт */
 .price-item:hover {
-    border-color: var(--accent); /* Рамка становится оранжевой */
-    transform: translateY(-10px); /* Карточка приподнимается */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Тень становится глубже */
+    border-color: var(--accent);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .price-item strong {
@@ -338,7 +358,9 @@ body {
     color: #666;
 }
 
-/* --- PORTFOLIO --- */
+/* ==========================================================================
+   7. ПОРТФОЛИО И ОТЗЫВЫ
+   ========================================================================== */
 .portfolio {
     padding: 60px 8%;
     background: white;
@@ -365,7 +387,6 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* --- REVIEWS --- */
 .reviews {
     padding: 80px 8%;
     text-align: center;
@@ -388,9 +409,11 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* --- FOOTER В СТИЛЕ МАКЕТА --- */
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
 .site-footer {
-    background-color: #121214; /* Глубокий черный цвет */
+    background-color: #121214;
     color: #ffffff;
     padding: 60px 8% 30px 8%;
     font-family: 'Inter', sans-serif;
@@ -398,7 +421,7 @@ body {
 
 .footer-top {
     display: flex;
-    justify-content: space-between; /* Разносит контент по краям */
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
@@ -411,21 +434,6 @@ body {
     margin-bottom: 15px;
 }
 
-.footer-brand .tagline {
-    font-size: 1rem;
-    color: #ffffff;
-    margin: 0;
-}
-
-.footer-contacts {
-    text-align: left;
-}
-
-.footer-contacts p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-}
-
 .footer-contacts a {
     color: #ffffff;
     text-decoration: none;
@@ -436,7 +444,6 @@ body {
     color: var(--accent);
 }
 
-/* Тонкая разделительная линия */
 .footer-line {
     width: 100%;
     height: 1px;
@@ -448,4 +455,51 @@ body {
     text-align: center;
     color: #888888;
     font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   9. АДАПТИВНОСТЬ
+   ========================================================================== */
+@media (max-width: 992px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .price-grid {
+        flex-direction: column;
+    }
+}
+
+/* Базовое состояние полей */
+input, textarea {
+    font-family: 'Inter', sans-serif; /* Исправляем шрифт здесь */
+    border: 1px solid #d1d1d1;       /* Светло-серая рамка в обычном состоянии */
+    border-radius: 10px;             /* Скругление как на макете */
+    padding: 12px 15px;
+    outline: none;                   /* Убираем стандартный синий контур браузера */
+    transition: border-color 0.3s;   /* Плавное изменение цвета */
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6b35; /* Рамка оранжевая */
+    /* Сдвиг 0 0, размытие 8px, серый цвет (черный на 10% прозрачности) */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); 
+    outline: none;
+}
+
+/* Если хочешь, чтобы при наведении мышкой (без клика) тоже менялся цвет */
+input:hover, textarea:hover {
+    border-color: #bcbcbc;
 }

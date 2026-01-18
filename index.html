@@ -7,29 +7,13 @@
     <title>РемонтПрофи | Качественная отделка квартир</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="js/languages.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header class="site-header">
-        <div class="logo">Ремонт<span>Профи</span></div>
-        <nav class="nav">
-            <a href="index.html" class="nav-link">Главная</a>
-            <a href="services.html" class="nav-link">Услуги</a>
-            <a href="portfolio.html" class="nav-link">Портфолио</a>
-            <a href="contacts.html" class="nav-link">Контакты</a>
-        </nav>
-        <a href="contacts.html">
-            <button class="btn-primary">Заказать звонок</button>
-        </a>
-        <div class="lang-switcher">
-            <a href="?lang=de" class="lang-link js-lang-link" data-lang="de">DE</a>
-            <span class="lang-divider">|</span>
-            <a href="?lang=en" class="lang-link js-lang-link" data-lang="en">EN</a>
-            <span class="lang-divider">|</span>
-            <a href="?lang=ru" class="lang-link js-lang-link" data-lang="ru">RU</a>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
         <section class="hero">
@@ -38,8 +22,12 @@
                 <p>Профессиональные ремонтно-отделочные работы любой сложности с гарантией до 3 лет и четким соблюдением
                     сметы.</p>
                 <div class="hero-btns">
-                    <button class="btn-cta">Узнать стоимость</button>
-                    <button class="btn-secondary">Наши работы</button>
+                    <a href="services.html" style="text-decoration: none;">
+                        <button class="btn-cta">Узнать стоимость</button>
+                    </a>
+                    <a href="portfolio.html" style="text-decoration: none;">
+                        <button class="btn-secondary">Наши работы</button>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -50,23 +38,35 @@
         <section id="services" class="features">
             <div class="card">
                 <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
                 </div>
                 <h3>Качество</h3>
                 <p>Используем только проверенные материалы и современное немецкое оборудование.</p>
             </div>
-        
+
             <div class="card">
                 <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
                 </div>
                 <h3>Сроки</h3>
                 <p>Прописываем штрафы за просрочку в договоре. Сдаем объекты вовремя.</p>
             </div>
-        
+
             <div class="card">
                 <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <polyline points="17 11 19 13 23 9"></polyline>
+                    </svg>
                 </div>
                 <h3>Гарантия</h3>
                 <p>Несем полную материальную ответственность в течение 36 месяцев после сдачи.</p>
@@ -143,8 +143,6 @@
             <p>&copy; 2026 РемонтПрофи. Сделано с любовью.</p>
         </div>
     </footer>
-
-    <script src="js/active-link.js" defer></script>
 
 </body>
 
