@@ -62,21 +62,36 @@ body {
     color: var(--accent);
 }
 
-.btn-primary {
+/* Общие правила анимации для всех кнопок */
+.btn-primary, .btn-secondary {
     background-color: transparent;
     color: var(--accent);
-    border: 2px solid #555; /* Оранжевая рамка */;
-    border-radius: 6px;
-    padding: 10px 22px;
+    border: 2px solid #555;
     cursor: pointer;
     font-weight: 600;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
+    outline: none;
 }
 
-.btn-primary:hover {
-    filter: brightness(1.1);
-    transform: translateY(-1px);
+/* Общая анимация при наведении */
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* И только размеры прописать отдельно */
+.btn-primary {
+    padding: 10px 24px;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    padding: 16px 35px;
+    border-radius: 12px;
 }
 
 /* --- HERO SECTION --- */
@@ -128,17 +143,6 @@ body {
     font-weight: 600;
     cursor: pointer;
     margin-right: 15px;
-    transition: 0.3s;
-}
-
-.btn-secondary {
-    background: transparent;
-    border: 2px solid #555;
-    color: var(--accent);
-    padding: 16px 35px;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
     transition: 0.3s;
 }
 
