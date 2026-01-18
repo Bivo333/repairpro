@@ -1,17 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Получаем имя текущего файла
-  let currentPage = window.location.pathname.split('/').pop();
-  
-  // Если мы на главной (путь пустой), считаем это index.html
-  if (currentPage === "") {
-      currentPage = "index.html";
-  }
-
-  const navLinks = document.querySelectorAll('.nav-link');
+  // --- Логика для основного меню (ваша текущая) ---
+  let currentPage = window.location.pathname.split('/').pop() || "index.html";
+  const navLinks = document.querySelectorAll('.nav .nav-link');
 
   navLinks.forEach(link => {
-      // Проверяем, совпадает ли href ссылки с текущей страницей
       if (link.getAttribute('href') === currentPage) {
+          link.classList.add('active');
+      }
+  });
+
+  // --- НОВАЯ Логика для переключателя языков ---
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentLang = urlParams.get('lang') || 'ru'; // По умолчанию RU
+  const langLinks = document.querySelectorAll('.js-lang-link');
+
+  langLinks.forEach(link => {
+      if (link.dataset.lang === currentLang) {
           link.classList.add('active');
       }
   });
