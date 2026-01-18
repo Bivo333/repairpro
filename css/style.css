@@ -233,7 +233,8 @@ body {
 }
 
 .gallery-item img:hover {
-    transform: scale(1.02);
+    transform: scale(1.025);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* --- REVIEWS --- */
