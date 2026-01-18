@@ -80,6 +80,31 @@ body {
     color: #ff6b35;
 }
 
+.logo-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit;        /* Наследуем цвет (хотя мы его задали спанам) */
+    display: flex;         /* Чтобы спаны стояли ровно в ряд */
+    align-items: center;
+}
+
+/* Стили для первой части (Белый) */
+.logo-link span:first-child {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Стили для второй части (Оранжевый) */
+.logo-link span:last-child {
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+/* Эффект при наведении — логотип станет чуть прозрачнее */
+.logo-link:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
 .nav {
     display: flex;
     /* Убрал margin-right у ссылок, использую gap для контроля */
