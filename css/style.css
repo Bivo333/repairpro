@@ -83,6 +83,21 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* Эффект при нажатии для обеих кнопок */
+.btn-primary:active, .btn-secondary:active {
+    /* Кнопка почти возвращается на поверхность */
+    transform: translateY(-1px); 
+    
+    /* Тень уменьшается, имитируя физический контакт с фоном */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    
+    /* Слегка затемняем, чтобы кнопка выглядела "нажатой" */
+    filter: brightness(0.9); 
+    
+    /* Делаем возврат быстрым для тактильного ощущения */
+    transition: all 0.1s; 
+}
+
 /* И только размеры прописать отдельно */
 .btn-primary {
     padding: 10px 24px;
@@ -143,7 +158,47 @@ body {
     font-weight: 600;
     cursor: pointer;
     margin-right: 15px;
-    transition: 0.3s;
+    
+    /* Улучшенная плавность и подготовка к эффектам */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden; /* Важно для эффекта блика */
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* Эффект при наведении */
+.btn-cta:hover {
+    transform: translateY(-4px) scale(1.02); /* Кнопка всплывает и чуть увеличивается */
+    filter: brightness(1.1); /* Становится сочнее */
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4); /* Тень становится глубже */
+}
+
+/* Анимация Блика (Shine effect) */
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.btn-cta:hover::after {
+    left: 150%; /* Блик пролетает сквозь кнопку */
+}
+
+/* Реакция на нажатие */
+.btn-cta:active {
+    transform: translateY(-1px) scale(0.98); /* Кнопка слегка сжимается */
 }
 
 /* --- FEATURES / CARDS --- */
