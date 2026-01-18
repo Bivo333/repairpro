@@ -189,12 +189,19 @@ body {
     flex: 1;
     min-width: 250px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    /* Добавляем прозрачную рамку заранее, чтобы ничего не прыгало */
+    border: 2px solid transparent; 
+    
+    /* Плавный переход для всех изменений */
+    transition: all 0.3s ease; 
+    cursor: pointer;
 }
 
-.price-item.featured {
-    border: 2px solid var(--accent);
-    transform: scale(1.05);
-    z-index: 2;
+/* 2. Рамка при наведении на ЛЮБОЙ пункт */
+.price-item:hover {
+    border-color: var(--accent); /* Рамка становится оранжевой */
+    transform: translateY(-10px); /* Карточка приподнимается */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Тень становится глубже */
 }
 
 .price-item strong {
