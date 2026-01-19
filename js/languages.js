@@ -1,6 +1,6 @@
 const translations = {
     "ru": {
-        // Навигация (из старого файла)
+        // Навигация
         "nav_home": "Главная",
         "nav_services": "Услуги",
         "nav_portfolio": "Портфолио",
@@ -52,27 +52,47 @@ const translations = {
         // Подвал
         "footer_tagline": "Создаем интерьеры, в которых хочется жить.",
         "footer_tel": "Тел: ",
-        "footer_copy": "© 2026 РемонтПрофи. Сделано с любовью."
+        "footer_copy": "© 2026 РемонтПрофи. Сделано с любовью.",
+
+        // --- Страница Услуги ---
+        "services_title": "Услуги | РемонтПрофи",
+        "services_page_title": "Подробные услуги",
+        "service_rough_title": "Черновая отделка",
+        "service_rough_text": "Возведение перегородок, штукатурка стен по маякам, стяжка пола и разводка коммуникаций. Основа вашего будущего интерьера.",
+        "service_electric_title": "Электромонтаж",
+        "service_electric_text": "Полная замена проводки, установка щитков, розеток и продуманных сценариев освещения под ключ.",
+        "service_finish_title": "Финишная отделка",
+        "service_finish_text": "Поклейка обоев любой сложности, декоративная штукатурка, покраска и укладка напольных покрытий."
     },
+
     "de": {
+        // Навигация
         "nav_home": "Startseite",
         "nav_services": "Leistungen",
         "nav_portfolio": "Portfolio",
         "nav_contacts": "Kontakte",
         "btn_call": "Rückruf",
+        
+        // Логотип
         "logo_main": "Reparatur",
         "logo_pro": "Profi",
+        
+        // Главная страница (Hero)
         "head_title": "ReparaturProfi | Qualitätsrenovierung von Wohnungen",
         "hero_title": "Wir verwandeln Beton in ein gemütliches Zuhause",
         "hero_desc": "Professionelle Renovierungsarbeiten jeder Komplexität mit bis zu 3 Jahren Garantie und strikter Budgeteinhaltung.",
         "btn_price": "Preis anfragen",
         "btn_works": "Unsere Projekte",
+        
+        // Преимущества (Features)
         "feat_q_title": "Qualität",
         "feat_q_desc": "Wir verwenden nur geprüfte Materialien und moderne deutsche Ausrüstung.",
         "feat_t_title": "Termine",
         "feat_t_desc": "Wir legen Vertragsstrafen für Verzögerungen fest. Wir liefern pünktlich.",
         "feat_g_title": "Garantie",
         "feat_g_desc": "Volle materielle Verantwortung für 36 Monate nach Übergabe.",
+        
+        // Цены (Pricing)
         "price_main_title": "Transparente Kosten",
         "price_1_title": "Kosmetische Reparatur",
         "price_1_val": "ab 50€ / m²",
@@ -86,35 +106,59 @@ const translations = {
         "price_3_val": "ab 250€ / m²",
         "price_3_li1": "Schlüsselfertiges Projekt",
         "price_3_li2": "Bauleitung",
+        
+        // Портфолио и Отзывы
         "port_title": "Unsere abgeschlossenen Projekte",
         "rev_title": "Kundenstimmen",
         "rev_1_text": "\"Die Wohnung wurde in 2 Monaten renoviert. Die Qualität der Fliesenfugen ist perfekt! Sehr zu empfehlen.\"",
         "rev_1_auth": "— Alexander, Wohnanlage 'Regenbogen'",
         "rev_2_text": "\"Sehr höfliches Team, der Müll wurde immer entsorgt. Der Designer war immer erreichbar.\"",
         "rev_2_auth": "— Maria, Privathaus",
+        
+        // Подвал
         "footer_tagline": "Wir schaffen Innenräume, in denen man leben möchte.",
         "footer_tel": "Tel: ",
-        "footer_copy": "© 2026 ReparaturProfi. Mit Liebe gemacht."
+        "footer_copy": "© 2026 ReparaturProfi. Mit Liebe gemacht.",
+
+        // --- Страница Услуги ---
+        "services_title": "Leistungen | ReparaturProfi",
+        "services_page_title": "Detaillierte Dienstleistungen",
+        "service_rough_title": "Rohbau & Grundierung",
+        "service_rough_text": "Errichtung von Trennwänden, Verputzen von Wänden nach Richtpunkten, Estrichlegen und Installation von Versorgungsleitungen. Das Fundament Ihrer Inneneinrichtung.",
+        "service_electric_title": "Elektroinstallation",
+        "service_electric_text": "Kompletter Austausch der Verkabelung, Installation von Schaltschränken, Steckdosen und durchdachten Beleuchtungsszenarien schlüsselfertig.",
+        "service_finish_title": "Innenausbau & Finish",
+        "service_finish_text": "Tapezieren jeglicher Komplexität, Dekoputz, Malerarbeiten und Verlegen von Bodenbelägen."
     },
+
     "en": {
+        // Навигация
         "nav_home": "Home",
         "nav_services": "Services",
         "nav_portfolio": "Portfolio",
         "nav_contacts": "Contacts",
         "btn_call": "Call us",
+        
+        // Логотип
         "logo_main": "Repair",
         "logo_pro": "Pro",
+        
+        // Главная страница (Hero)
         "head_title": "RepairPro | High-quality apartment renovation",
         "hero_title": "Turning concrete into a cozy home",
         "hero_desc": "Professional renovation and finishing works of any complexity with up to 3 years warranty and strict budget adherence.",
         "btn_price": "Get a quote",
         "btn_works": "Our works",
+        
+        // Преимущества (Features)
         "feat_q_title": "Quality",
         "feat_q_desc": "We use only proven materials and modern German equipment.",
         "feat_t_title": "Deadlines",
         "feat_t_desc": "We include penalties for delays in the contract. We deliver on time.",
         "feat_g_title": "Warranty",
         "feat_g_desc": "Full financial responsibility for 36 months after project completion.",
+        
+        // Цены (Pricing)
         "price_main_title": "Transparent pricing",
         "price_1_title": "Cosmetic renovation",
         "price_1_val": "from 50€ / m²",
@@ -128,14 +172,28 @@ const translations = {
         "price_3_val": "from 250€ / m²",
         "price_3_li1": "Turnkey project",
         "price_3_li2": "Project supervision",
+        
+        // Портфолио и Отзывы
         "port_title": "Our completed projects",
         "rev_title": "What our clients say",
         "rev_1_text": "\"Renovated my apartment in 2 months. The tile work is flawless! Highly recommend.\"",
         "rev_1_auth": "— Alexander, 'Rainbow' Residential Complex",
         "rev_2_text": "\"Very polite crew, always cleared the debris. The designer was always available.\"",
         "rev_2_auth": "— Maria, private house",
+        
+        // Подвал
         "footer_tagline": "Creating interiors you'll love to live in.",
         "footer_tel": "Tel: ",
-        "footer_copy": "© 2026 RepairPro. Made with love."
+        "footer_copy": "© 2026 RepairPro. Made with love.",
+
+        // --- Страница Услуги ---
+        "services_title": "Services | RepairPro",
+        "services_page_title": "Detailed services",
+        "service_rough_title": "Rough finishing",
+        "service_rough_text": "Construction of partitions, plastering of walls, floor screed, and installation of utilities. The foundation of your future interior.",
+        "service_electric_title": "Electrical works",
+        "service_electric_text": "Full wiring replacement, installation of electrical panels, sockets, and well-planned lighting scenarios.",
+        "service_finish_title": "Final finishing",
+        "service_finish_text": "Wallpapering of any complexity, decorative plastering, painting, and installation of floor coverings."
     }
 };
