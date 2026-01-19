@@ -62,7 +62,14 @@ const translations = {
         "service_electric_title": "Электромонтаж",
         "service_electric_text": "Полная замена проводки, установка щитков, розеток и продуманных сценариев освещения под ключ.",
         "service_finish_title": "Финишная отделка",
-        "service_finish_text": "Поклейка обоев любой сложности, декоративная штукатурка, покраска и укладка напольных покрытий."
+        "service_finish_text": "Поклейка обоев любой сложности, декоративная штукатурка, покраска и укладка напольных покрытий.",
+
+        // --- Страница Портфолио ---
+        "port_main_title": "Реализованные объекты",
+        "port_item_1": "ЖК «Ривер Парк» — 75 м²",
+        "port_item_2": "Кухня-гостиная в стиле лофт",
+        "port_item_3": "Ванная комната под мрамор",
+        "port_item_4": "Спальня в скандинавском стиле"
     },
 
     "de": {
@@ -113,7 +120,7 @@ const translations = {
         "rev_1_text": "\"Die Wohnung wurde in 2 Monaten renoviert. Die Qualität der Fliesenfugen ist perfekt! Sehr zu empfehlen.\"",
         "rev_1_auth": "— Alexander, Wohnanlage 'Regenbogen'",
         "rev_2_text": "\"Sehr höfliches Team, der Müll wurde immer entsorgt. Der Designer war immer erreichbar.\"",
-        "rev_2_auth": "— Maria, Privathaus",
+        "rev_2_auth": "— Maria, Privathabus",
         
         // Подвал
         "footer_tagline": "Wir schaffen Innenräume, in denen man leben möchte.",
@@ -128,7 +135,14 @@ const translations = {
         "service_electric_title": "Elektroinstallation",
         "service_electric_text": "Kompletter Austausch der Verkabelung, Installation von Schaltschränken, Steckdosen und durchdachten Beleuchtungsszenarien schlüsselfertig.",
         "service_finish_title": "Innenausbau & Finish",
-        "service_finish_text": "Tapezieren jeglicher Komplexität, Dekoputz, Malerarbeiten und Verlegen von Bodenbelägen."
+        "service_finish_text": "Tapezieren jeglicher Komplexität, Dekoputz, Malerarbeiten und Verlegen von Bodenbelägen.",
+
+        // --- Страница Портфолио ---
+        "port_main_title": "Realisierte Objekte",
+        "port_item_1": "Wohnanlage 'River Park' — 75 m²",
+        "port_item_2": "Wohnküche im Loft-Stil",
+        "port_item_3": "Badezimmer in Marmoroptik",
+        "port_item_4": "Schlafzimmer im skandinavischen Stil"
     },
 
     "en": {
@@ -194,6 +208,13 @@ const translations = {
         "service_electric_title": "Electrical works",
         "service_electric_text": "Full wiring replacement, installation of electrical panels, sockets, and well-planned lighting scenarios.",
         "service_finish_title": "Final finishing",
-        "service_finish_text": "Wallpapering of any complexity, decorative plastering, painting, and installation of floor coverings."
+        "service_finish_text": "Wallpapering of any complexity, decorative plastering, painting, and installation of floor coverings.",
+
+        // --- Страница Портфолио ---
+        "port_main_title": "Completed projects",
+        "port_item_1": "River Park Residential Complex — 75 sq. m.",
+        "port_item_2": "Kitchen-living room in loft style",
+        "port_item_3": "Marble-style bathroom",
+        "port_item_4": "Scandinavian-style bedroom"
     }
 };
