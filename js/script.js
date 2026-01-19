@@ -1,33 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. ОПРЕДЕЛЕНИЕ ЯЗЫКА (Логика: localStorage -> Браузер -> По умолчанию 'ru')
+    // 1. ОПРЕДЕЛЕНИЕ ЯЗЫКА
     let savedLang = localStorage.getItem('selectedLang');
 
-    // Очистка от мусорных значений, если они случайно попали в память
     if (savedLang === 'null' || savedLang === 'undefined') {
         savedLang = null;
     }
 
     if (!savedLang) {
-        // Определяем язык браузера (например, "de-DE", "en-US", "ru-RU")
         const browserLang = navigator.language || navigator.userLanguage;
         const shortLang = browserLang.substring(0, 2).toLowerCase();
 
-        console.log("Первый визит. Язык браузера обнаружен:", shortLang);
-
-        // Проверяем, есть ли такой язык в нашем файле languages.js
         if (typeof translations !== 'undefined' && translations[shortLang]) {
             savedLang = shortLang;
         } else {
-            savedLang = 'ru'; // Если язык браузера не поддерживается
+            savedLang = 'ru'; 
         }
-        
-        // Сразу сохраняем выбор, чтобы автоопределение не срабатывало при каждом обновлении
         localStorage.setItem('selectedLang', savedLang);
     }
 
-    console.log("Итоговый выбранный язык:", savedLang);
-
-    // 2. ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ КОМПОНЕНТОВ (Header/Footer)
+    // 2. ФУНКЦИЯ ДЛЯ ЗАГРУЗКИ КОМПОНЕНТОВ
     async function loadComponent(id, url) {
         const placeholder = document.getElementById(id);
         if (!placeholder) return null;
@@ -40,58 +31,50 @@ document.addEventListener("DOMContentLoaded", () => {
             return placeholder;
         } catch (error) {
             console.error("Ошибка при загрузке компонента:", error);
-            placeholder.innerHTML = `<p style='color:red; text-align:center; padding:10px;'>Ошибка: ${url} не найден</p>`;
             return null;
         }
     }
 
     // 3. ФУНКЦИЯ ПРИМЕНЕНИЯ ПЕРЕВОДА
     function applyLanguage(lang) {
-        if (typeof translations === 'undefined') {
-            console.error("Критическая ошибка: Объект 'translations' не найден. Проверьте подключение languages.js");
-            return;
-        }
+        if (typeof translations === 'undefined') return;
 
-        // Переводим все элементы с атрибутом data-i18n
+        // Перевод обычного текста
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
-                // Если это поле ввода (input/textarea), меняем placeholder
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.placeholder = translations[lang][key];
-                } else {
-                    el.textContent = translations[lang][key];
-                }
+                // Используем innerHTML на случай, если в тексте будут теги (напр. <br>)
+                el.innerHTML = translations[lang][key];
             }
         });
 
-        // Устанавливаем атрибут lang для HTML (полезно для SEO и озвучки)
+        // Перевод плейсхолдеров (специально для форм в контактах)
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+
         document.documentElement.lang = lang;
         localStorage.setItem('selectedLang', lang);
 
-        // Подсветка активной кнопки языка в меню
+        // Обновляем активный класс в переключателе языков
         document.querySelectorAll('.js-lang-link').forEach(link => {
-            if (link.getAttribute('data-lang') === lang) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
+            link.classList.toggle('active', link.getAttribute('data-lang') === lang);
         });
     }
 
-    // 4. ЗАПУСК ЗАГРУЗКИ И ИНИЦИАЛИЗАЦИЯ
+    // 4. ЗАПУСК
     Promise.all([
         loadComponent("header-placeholder", "header.html"),
         loadComponent("footer-placeholder", "footer.html")
     ]).then(([headerPlaceholder]) => {
         
-        // Как только файлы загружены, переводим всю страницу
         applyLanguage(savedLang);
 
-        // Если шапка загрузилась, настраиваем в ней события
         if (headerPlaceholder) {
-            
-            // Клик по ссылкам переключения языков
+            // Вешаем события на переключатели языков (делегирование не нужно, так как links уже в DOM)
             const langLinks = headerPlaceholder.querySelectorAll('.js-lang-link');
             langLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -101,15 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
 
-            // Кнопка обратной связи в шапке
-            const callBtn = headerPlaceholder.querySelector('.btn-primary');
-            if (callBtn) {
-                callBtn.onclick = () => { window.location.href = 'contacts.html'; };
-            }
-
-            // Подсветка текущей страницы в меню навигации
+            // Подсветка активной страницы
             const currentPath = window.location.pathname.split("/").pop() || "index.html";
             headerPlaceholder.querySelectorAll(".nav-link").forEach(link => {
+                // Используем endsWith для корректной работы на хостингах
                 if (link.getAttribute("href") === currentPath) {
                     link.classList.add("active");
                 }

@@ -69,7 +69,20 @@ const translations = {
         "port_item_1": "ЖК «Ривер Парк» — 75 м²",
         "port_item_2": "Кухня-гостиная в стиле лофт",
         "port_item_3": "Ванная комната под мрамор",
-        "port_item_4": "Спальня в скандинавском стиле"
+        "port_item_4": "Спальня в скандинавском стиле",
+
+        // --- Страница Контакты ---
+        "cont_main_title": "Свяжитесь с нами",
+        "cont_office_title": "Наш офис",
+        "cont_office_addr": "г. Хофхайм, ул. Хофхаймер Штрассе, д. 25, офис 410",
+        "cont_phone_title": "Телефон",
+        "cont_schedule_title": "Режим работы",
+        "cont_schedule_text": "Пн-Пт: 08:00 — 17:00, Сб-Вс: Выходной",
+        "cont_form_title": "Оставить заявку",
+        "cont_form_name": "Ваше имя",
+        "cont_form_phone": "Номер телефона",
+        "cont_form_msg": "Что нужно отремонтировать?",
+        "cont_form_btn": "Отправить запрос"
     },
 
     "de": {
@@ -120,7 +133,7 @@ const translations = {
         "rev_1_text": "\"Die Wohnung wurde in 2 Monaten renoviert. Die Qualität der Fliesenfugen ist perfekt! Sehr zu empfehlen.\"",
         "rev_1_auth": "— Alexander, Wohnanlage 'Regenbogen'",
         "rev_2_text": "\"Sehr höfliches Team, der Müll wurde immer entsorgt. Der Designer war immer erreichbar.\"",
-        "rev_2_auth": "— Maria, Privathabus",
+        "rev_2_auth": "— Maria, Privathaus",
         
         // Подвал
         "footer_tagline": "Wir schaffen Innenräume, in denen man leben möchte.",
@@ -142,7 +155,20 @@ const translations = {
         "port_item_1": "Wohnanlage 'River Park' — 75 m²",
         "port_item_2": "Wohnküche im Loft-Stil",
         "port_item_3": "Badezimmer in Marmoroptik",
-        "port_item_4": "Schlafzimmer im skandinavischen Stil"
+        "port_item_4": "Schlafzimmer im skandinavischen Stil",
+
+        // --- Страница Контакты ---
+        "cont_main_title": "Kontaktieren Sie uns",
+        "cont_office_title": "Unser Büro",
+        "cont_office_addr": "Hofheimer Str. 25, Büro 410, Hofheim",
+        "cont_phone_title": "Telefon",
+        "cont_schedule_title": "Öffnungszeiten",
+        "cont_schedule_text": "Mo-Fr: 08:00 — 17:00, Sa-So: Geschlossen",
+        "cont_form_title": "Anfrage senden",
+        "cont_form_name": "Ihr Name",
+        "cont_form_phone": "Telefonnummer",
+        "cont_form_msg": "Was muss repariert werden?",
+        "cont_form_btn": "Anfrage absenden"
     },
 
     "en": {
@@ -215,6 +241,19 @@ const translations = {
         "port_item_1": "River Park Residential Complex — 75 sq. m.",
         "port_item_2": "Kitchen-living room in loft style",
         "port_item_3": "Marble-style bathroom",
-        "port_item_4": "Scandinavian-style bedroom"
+        "port_item_4": "Scandinavian-style bedroom",
+
+        // --- Страница Контакты ---
+        "cont_main_title": "Contact Us",
+        "cont_office_title": "Our Office",
+        "cont_office_addr": "Hofheimer Str. 25, Office 410, Hofheim",
+        "cont_phone_title": "Phone",
+        "cont_schedule_title": "Working Hours",
+        "cont_schedule_text": "Mon-Fri: 08:00 — 17:00, Sat-Sun: Closed",
+        "cont_form_title": "Send a Request",
+        "cont_form_name": "Your Name",
+        "cont_form_phone": "Phone Number",
+        "cont_form_msg": "What needs to be repaired?",
+        "cont_form_btn": "Send Request"
     }
 };

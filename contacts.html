@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты | РемонтПрофи</title>
+    <title data-i18n="nav_contacts">Контакты | РемонтПрофи</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -24,30 +24,30 @@
     <div id="header-placeholder"></div>
 
     <main style="padding: 100px 8%;">
-        <h1 style="text-align: center; margin-bottom: 50px;">Свяжитесь с нами</h1>
+        <h1 data-i18n="cont_main_title" style="text-align: center; margin-bottom: 50px;">Свяжитесь с нами</h1>
 
         <div style="display: flex; gap: 50px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 300px;">
-                <h2>Наш офис</h2>
-                <p>г. Хофхайм, ул. Хофхаймер Штрассе, д. 25, офис 410</p>
+                <h2 data-i18n="cont_office_title">Наш офис</h2>
+                <p data-i18n="cont_office_addr">г. Хофхайм, ул. Хофхаймер Штрассе, д. 25, офис 410</p>
 
-                <h2 style="margin-top: 30px;">Телефон</h2>
+                <h2 data-i18n="cont_phone_title" style="margin-top: 30px;">Телефон</h2>
                 <p style="font-size: 1.5rem; color: var(--accent); font-weight: bold;">+49 (0123) 456-78-90</p>
 
-                <h2 style="margin-top: 30px;">Режим работы</h2>
-                <p>Пн-Пт: 08:00 — 17:00<br>Сб, Вс: Выходной</p>
+                <h2 data-i18n="cont_schedule_title" style="margin-top: 30px;">Режим работы</h2>
+                <p data-i18n="cont_schedule_text">Пн-Пт: 08:00 — 17:00<br>Сб, Вс: Выходной</p>
             </div>
 
             <div class="card" style="flex: 1; min-width: 300px;">
-                <h2>Оставить заявку</h2>
+                <h2 data-i18n="cont_form_title">Оставить заявку</h2>
                 <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <input type="text" placeholder="Ваше имя"
+                    <input data-i18n-placeholder="cont_form_name" type="text" placeholder="Ваше имя"
                         style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                    <input type="tel" placeholder="Номер телефона"
+                    <input data-i18n-placeholder="cont_form_phone" type="tel" placeholder="Номер телефона"
                         style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                    <textarea placeholder="Что нужно отремонтировать?" rows="4"
+                    <textarea data-i18n-placeholder="cont_form_msg" placeholder="Что нужно отремонтировать?" rows="4"
                         style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;"></textarea>
-                    <button type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
+                    <button data-i18n="cont_form_btn" type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
                 </form>
             </div>
         </div>
