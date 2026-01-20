@@ -6,18 +6,18 @@ const translations = {
         "nav_portfolio": "Портфолио",
         "nav_contacts": "Контакты",
         "btn_call": "Заказать звонок",
-        
+
         // Логотип
         "logo_main": "Ремонт",
         "logo_pro": "Профи",
-        
+
         // Главная страница (Hero)
         "head_title": "РемонтПрофи | Качественная отделка квартир",
         "hero_title": "Превращаем бетон в уютный дом",
         "hero_desc": "Профессиональные ремонтно-отделочные работы любой сложности с гарантией до 3 лет и четким соблюдением сметы.",
         "btn_price": "Узнать стоимость",
         "btn_works": "Наши работы",
-        
+
         // Преимущества (Features)
         "feat_q_title": "Качество",
         "feat_q_desc": "Используем только проверенные материалы и современное немецкое оборудование.",
@@ -25,7 +25,7 @@ const translations = {
         "feat_t_desc": "Прописываем штрафы за просрочку в договоре. Сдаем объекты вовремя.",
         "feat_g_title": "Гарантия",
         "feat_g_desc": "Несем полную материальную ответственность в течение 36 месяцев после сдачи.",
-        
+
         // Цены (Pricing)
         "price_main_title": "Прозрачная стоимость",
         "price_1_title": "Косметический ремонт",
@@ -40,7 +40,7 @@ const translations = {
         "price_3_val": "от 250€ / м²",
         "price_3_li1": "Проект под ключ",
         "price_3_li2": "Авторский надзор",
-        
+
         // Портфолио и Отзывы
         "port_title": "Наши выполненные проекты",
         "rev_title": "Что говорят клиенты",
@@ -48,7 +48,7 @@ const translations = {
         "rev_1_auth": "— Александр, ЖК «Радужный»",
         "rev_2_text": "\"Очень вежливая бригада, мусор за собой всегда вывозили. Дизайнер был всегда на связи.\"",
         "rev_2_auth": "— Мария, частный дом",
-        
+
         // Подвал
         "footer_tagline": "Создаем интерьеры, в которых хочется жить.",
         "footer_tel": "Тел: ",
@@ -82,7 +82,11 @@ const translations = {
         "cont_form_name": "Ваше имя",
         "cont_form_phone": "Номер телефона",
         "cont_form_msg": "Что нужно отремонтировать?",
-        "cont_form_btn": "Отправить запрос"
+        "cont_form_btn": "Отправить запрос",
+
+        // --- Отправка Заявки ---
+        "cont_form_success": "✅ Спасибо! Ваша заявка отправлена.",
+        "cont_form_error": "❌ Ошибка при отправке. Попробуйте снова."
     },
 
     "de": {
@@ -92,18 +96,18 @@ const translations = {
         "nav_portfolio": "Portfolio",
         "nav_contacts": "Kontakte",
         "btn_call": "Rückruf",
-        
+
         // Логотип
         "logo_main": "Reparatur",
         "logo_pro": "Profi",
-        
+
         // Главная страница (Hero)
         "head_title": "ReparaturProfi | Qualitätsrenovierung von Wohnungen",
         "hero_title": "Wir verwandeln Beton in ein gemütliches Zuhause",
         "hero_desc": "Professionelle Renovierungsarbeiten jeder Komplexität mit bis zu 3 Jahren Garantie und strikter Budgeteinhaltung.",
         "btn_price": "Preis anfragen",
         "btn_works": "Unsere Projekte",
-        
+
         // Преимущества (Features)
         "feat_q_title": "Qualität",
         "feat_q_desc": "Wir verwenden nur geprüfte Materialien und moderne deutsche Ausrüstung.",
@@ -111,7 +115,7 @@ const translations = {
         "feat_t_desc": "Wir legen Vertragsstrafen für Verzögerungen fest. Wir liefern pünktlich.",
         "feat_g_title": "Garantie",
         "feat_g_desc": "Volle materielle Verantwortung für 36 Monate nach Übergabe.",
-        
+
         // Цены (Pricing)
         "price_main_title": "Transparente Kosten",
         "price_1_title": "Kosmetische Reparatur",
@@ -126,7 +130,7 @@ const translations = {
         "price_3_val": "ab 250€ / m²",
         "price_3_li1": "Schlüsselfertiges Projekt",
         "price_3_li2": "Bauleitung",
-        
+
         // Портфолио и Отзывы
         "port_title": "Unsere abgeschlossenen Projekte",
         "rev_title": "Kundenstimmen",
@@ -134,7 +138,7 @@ const translations = {
         "rev_1_auth": "— Alexander, Wohnanlage 'Regenbogen'",
         "rev_2_text": "\"Sehr höfliches Team, der Müll wurde immer entsorgt. Der Designer war immer erreichbar.\"",
         "rev_2_auth": "— Maria, Privathaus",
-        
+
         // Подвал
         "footer_tagline": "Wir schaffen Innenräume, in denen man leben möchte.",
         "footer_tel": "Tel: ",
@@ -168,7 +172,11 @@ const translations = {
         "cont_form_name": "Ihr Name",
         "cont_form_phone": "Telefonnummer",
         "cont_form_msg": "Was muss repariert werden?",
-        "cont_form_btn": "Anfrage absenden"
+        "cont_form_btn": "Anfrage absenden",
+
+        // --- Отправка Заявки ---
+        "cont_form_success": "✅ Danke! Ihre Anfrage wurde erfolgreich gesendet.",
+        "cont_form_error": "❌ Fehler beim Senden. Bitte versuchen Sie es erneut."
     },
 
     "en": {
@@ -178,18 +186,18 @@ const translations = {
         "nav_portfolio": "Portfolio",
         "nav_contacts": "Contacts",
         "btn_call": "Call us",
-        
+
         // Логотип
         "logo_main": "Repair",
         "logo_pro": "Pro",
-        
+
         // Главная страница (Hero)
         "head_title": "RepairPro | High-quality apartment renovation",
         "hero_title": "Turning concrete into a cozy home",
         "hero_desc": "Professional renovation and finishing works of any complexity with up to 3 years warranty and strict budget adherence.",
         "btn_price": "Get a quote",
         "btn_works": "Our works",
-        
+
         // Преимущества (Features)
         "feat_q_title": "Quality",
         "feat_q_desc": "We use only proven materials and modern German equipment.",
@@ -197,7 +205,7 @@ const translations = {
         "feat_t_desc": "We include penalties for delays in the contract. We deliver on time.",
         "feat_g_title": "Warranty",
         "feat_g_desc": "Full financial responsibility for 36 months after project completion.",
-        
+
         // Цены (Pricing)
         "price_main_title": "Transparent pricing",
         "price_1_title": "Cosmetic renovation",
@@ -212,7 +220,7 @@ const translations = {
         "price_3_val": "from 250€ / m²",
         "price_3_li1": "Turnkey project",
         "price_3_li2": "Project supervision",
-        
+
         // Портфолио и Отзывы
         "port_title": "Our completed projects",
         "rev_title": "What our clients say",
@@ -220,7 +228,7 @@ const translations = {
         "rev_1_auth": "— Alexander, 'Rainbow' Residential Complex",
         "rev_2_text": "\"Very polite crew, always cleared the debris. The designer was always available.\"",
         "rev_2_auth": "— Maria, private house",
-        
+
         // Подвал
         "footer_tagline": "Creating interiors you'll love to live in.",
         "footer_tel": "Tel: ",
@@ -254,6 +262,11 @@ const translations = {
         "cont_form_name": "Your Name",
         "cont_form_phone": "Phone Number",
         "cont_form_msg": "What needs to be repaired?",
-        "cont_form_btn": "Send Request"
+        "cont_form_btn": "Send Request",
+
+        // --- Отправка Заявки ---
+        "cont_form_success": "✅ Thank you! Your request has been sent successfully.",
+        "cont_form_error": "❌ Sending error. Please try again."
     }
+
 };

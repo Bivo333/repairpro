@@ -61,30 +61,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // === 5. ОБРАБОТКА ФОРМЫ (EmailJS) ===
+    // === ОБРАБОТКА ФОРМЫ (EmailJS) ===
     const contactForm = document.getElementById('repair-form');
+    const statusMsg = document.getElementById('form-status'); // Нашли поле статуса
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
             const btn = document.getElementById('send-btn');
             const originalText = btn.innerHTML;
-            
-            // Состояние загрузки
+
+            // Очищаем предыдущие сообщения
+            statusMsg.innerHTML = '';
             btn.disabled = true;
-            btn.innerHTML = (savedLang === 'ru') ? 'Отправка...' : 'Sending...';
+            btn.innerHTML = (savedLang === 'ru') ? 'Отправка...' : (savedLang === 'de' ? 'Senden...' : 'Sending...');
 
             emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
                 .then(() => {
-                    const successMsg = (savedLang === 'ru') ? 'Успешно отправлено!' : 'Sent successfully!';
-                    alert(successMsg);
-                    contactForm.reset();
+                    // Берем перевод из объекта translations по ключу
+                    const successText = translations[savedLang]?.['cont_form_success'] || 'Success!';
+
+                    statusMsg.style.color = '#555'; // Cерый цвет
+                    statusMsg.innerHTML = successText;
+
+                    contactForm.reset(); // Очистить форму
                 }, (error) => {
-                    alert('Error: ' + JSON.stringify(error));
+                    const errorText = translations[savedLang]?.['cont_form_error'] || 'Error!';
+                    statusMsg.style.color = '#f44336'; // Красный цвет
+                    statusMsg.innerHTML = errorText;
+                    console.error('EmailJS Error:', error);
                 })
                 .finally(() => {
                     btn.disabled = false;
                     btn.innerHTML = originalText;
+
+                    // (Опционально) Скрыть сообщение через 5 секунд
+                    setTimeout(() => {
+                        statusMsg.innerHTML = '';
+                    }, 5000);
                 });
         });
     }

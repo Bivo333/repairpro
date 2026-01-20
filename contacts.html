@@ -44,14 +44,21 @@
                 <form id="repair-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
                     <input name="user_name" data-i18n-placeholder="cont_form_name" type="text" placeholder="Ваше имя"
                         style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required>
-                    
-                    <input name="user_phone" data-i18n-placeholder="cont_form_phone" type="tel" placeholder="Номер телефона"
-                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required>
-                    
-                    <textarea name="user_message" data-i18n-placeholder="cont_form_msg" placeholder="Что нужно отремонтировать?" rows="4"
+
+                    <input name="user_phone" data-i18n-placeholder="cont_form_phone" type="tel"
+                        placeholder="Номер телефона" style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;"
+                        required>
+
+                    <textarea name="user_message" data-i18n-placeholder="cont_form_msg"
+                        placeholder="Что нужно отремонтировать?" rows="4"
                         style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required></textarea>
-                    
-                    <button id="send-btn" data-i18n="cont_form_btn" type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
+
+                    <button id="send-btn" data-i18n="cont_form_btn" type="submit" class="btn-cta"
+                        style="margin: 0;">Отправить запрос</button>
+
+                    <div id="form-status"
+                        style="margin-top: 15px; text-align: center; font-weight: 600; min-height: 24px;"></div>
+
                 </form>
             </div>
         </div>
