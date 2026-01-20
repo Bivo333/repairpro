@@ -15,6 +15,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/languages.js"></script>
     <script src="js/script.js" defer></script>
 </head>
@@ -40,14 +41,17 @@
 
             <div class="card" style="flex: 1; min-width: 300px;">
                 <h2 data-i18n="cont_form_title">Оставить заявку</h2>
-                <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
-                    <input data-i18n-placeholder="cont_form_name" type="text" placeholder="Ваше имя"
-                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                    <input data-i18n-placeholder="cont_form_phone" type="tel" placeholder="Номер телефона"
-                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                    <textarea data-i18n-placeholder="cont_form_msg" placeholder="Что нужно отремонтировать?" rows="4"
-                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;"></textarea>
-                    <button data-i18n="cont_form_btn" type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
+                <form id="repair-form" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                    <input name="user_name" data-i18n-placeholder="cont_form_name" type="text" placeholder="Ваше имя"
+                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required>
+                    
+                    <input name="user_phone" data-i18n-placeholder="cont_form_phone" type="tel" placeholder="Номер телефона"
+                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required>
+                    
+                    <textarea name="user_message" data-i18n-placeholder="cont_form_msg" placeholder="Что нужно отремонтировать?" rows="4"
+                        style="padding: 12px; border-radius: 8px; border: 1px solid #ddd;" required></textarea>
+                    
+                    <button id="send-btn" data-i18n="cont_form_btn" type="submit" class="btn-cta" style="margin: 0;">Отправить запрос</button>
                 </form>
             </div>
         </div>
