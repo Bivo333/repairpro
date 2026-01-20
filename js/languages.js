@@ -74,7 +74,7 @@ const translations = {
         // --- Страница Контакты ---
         "cont_main_title": "Свяжитесь с нами",
         "cont_office_title": "Наш офис",
-        "cont_office_addr": "г. Хофхайм, ул. Хофхаймер Штрассе, д. 25, офис 410",
+        "cont_office_addr": "Хофхаймер штрассе 25, офис 410, 65719 Хофхайм-ам-Таунус, Германия",
         "cont_phone_title": "Телефон",
         "cont_schedule_title": "Режим работы",
         "cont_schedule_text": "Пн-Пт: 08:00 — 17:00, Сб-Вс: Выходной",
@@ -165,7 +165,7 @@ const translations = {
         // --- Страница Контакты ---
         "cont_main_title": "Kontaktieren Sie uns",
         "cont_office_title": "Unser Büro",
-        "cont_office_addr": "Hofheimer Str. 25, Büro 410, Hofheim",
+        "cont_office_addr": "Hofheimer Str. 25, Büro 410, 65719 Hofheim am Taunus",
         "cont_phone_title": "Telefon",
         "cont_schedule_title": "Öffnungszeiten",
         "cont_schedule_text": "Mo-Fr: 08:00 — 17:00, Sa-So: Geschlossen",
@@ -256,7 +256,7 @@ const translations = {
         // --- Страница Контакты ---
         "cont_main_title": "Contact Us",
         "cont_office_title": "Our Office",
-        "cont_office_addr": "Hofheimer Str. 25, Office 410, Hofheim",
+        "cont_office_addr": "25 Hofheimer Str., Office 410, 65719 Hofheim am Taunus, Germany",
         "cont_phone_title": "Phone",
         "cont_schedule_title": "Working Hours",
         "cont_schedule_text": "Mon-Fri: 08:00 — 17:00, Sat-Sun: Closed",
