@@ -61,45 +61,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // === ОБРАБОТКА ФОРМЫ (EmailJS) ===
+    // === ОБРАБОТКА ФОРМЫ (с проверкой телефона и цветом #555) ===
     const contactForm = document.getElementById('repair-form');
-    const statusMsg = document.getElementById('form-status'); // Нашли поле статуса
+    const statusMsg = document.getElementById('form-status');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            const btn = document.getElementById('send-btn');
-            const originalText = btn.innerHTML;
+            // 1. Получаем значение телефона
+            const phoneInput = this.querySelector('input[name="user_phone"]');
+            const phoneValue = phoneInput.value;
 
-            // Очищаем предыдущие сообщения
-            statusMsg.innerHTML = '';
+            // 2. Регулярное выражение: разрешает цифры, пробелы, +, -, ( )
+            // Минимум 5 цифр
+            const phoneRegex = /^[0-9+\s()\-]{5,}$/;
+
+            if (!phoneRegex.test(phoneValue)) {
+                statusMsg.style.color = "#f44336"; // Ошибка красным
+                statusMsg.innerHTML = (savedLang === 'ru') ? "❌ Введите корректный номер телефона" :
+                    (savedLang === 'de' ? "❌ Ungültige Telefonnummer" : "❌ Invalid phone number");
+                return; // Прерываем отправку
+            }
+
+            // 3. Если проверка пройдена — отправляем
+            const btn = document.getElementById('send-btn');
             btn.disabled = true;
-            btn.innerHTML = (savedLang === 'ru') ? 'Отправка...' : (savedLang === 'de' ? 'Senden...' : 'Sending...');
+            statusMsg.innerHTML = '';
 
             emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
                 .then(() => {
-                    // Берем перевод из объекта translations по ключу
-                    const successText = translations[savedLang]?.['cont_form_success'] || 'Success!';
-
-                    statusMsg.style.color = '#555'; // Cерый цвет
-                    statusMsg.innerHTML = successText;
-
-                    contactForm.reset(); // Очистить форму
-                }, (error) => {
-                    const errorText = translations[savedLang]?.['cont_form_error'] || 'Error!';
-                    statusMsg.style.color = '#f44336'; // Красный цвет
-                    statusMsg.innerHTML = errorText;
-                    console.error('EmailJS Error:', error);
+                    statusMsg.style.color = "#555"; // Ваш любимый серый
+                    statusMsg.innerHTML = translations[savedLang]?.["cont_form_success"] || "Success!";
+                    contactForm.reset();
+                })
+                .catch((error) => {
+                    statusMsg.style.color = "#f44336";
+                    statusMsg.innerHTML = translations[savedLang]?.["cont_form_error"] || "Error!";
                 })
                 .finally(() => {
                     btn.disabled = false;
-                    btn.innerHTML = originalText;
-
-                    // (Опционально) Скрыть сообщение через 5 секунд
-                    setTimeout(() => {
-                        statusMsg.innerHTML = '';
-                    }, 5000);
                 });
         });
     }

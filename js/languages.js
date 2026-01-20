@@ -81,6 +81,7 @@ const translations = {
         "cont_form_title": "Оставить заявку",
         "cont_form_name": "Ваше имя",
         "cont_form_phone": "Номер телефона",
+        "cont_form_email": "Ваш Email",
         "cont_form_msg": "Что нужно отремонтировать?",
         "cont_form_btn": "Отправить запрос",
 
@@ -171,6 +172,7 @@ const translations = {
         "cont_form_title": "Anfrage senden",
         "cont_form_name": "Ihr Name",
         "cont_form_phone": "Telefonnummer",
+        "cont_form_email": "Ihre E-Mail-Adresse",
         "cont_form_msg": "Was muss repariert werden?",
         "cont_form_btn": "Anfrage absenden",
 
@@ -261,6 +263,7 @@ const translations = {
         "cont_form_title": "Send a Request",
         "cont_form_name": "Your Name",
         "cont_form_phone": "Phone Number",
+        "cont_form_email": "Your Email",
         "cont_form_msg": "What needs to be repaired?",
         "cont_form_btn": "Send Request",
 
