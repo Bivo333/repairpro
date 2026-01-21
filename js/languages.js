@@ -86,8 +86,8 @@ const translations = {
         "cont_form_btn": "Отправить запрос",
 
         // --- Отправка Заявки ---
-        "cont_form_success": "✅ Спасибо! Ваша заявка отправлена.",
-        "cont_form_error": "❌ Ошибка при отправке. Попробуйте снова."
+        "cont_form_success": "✅ Спасибо! Ваша заявка отправлена",
+        "cont_form_error": "❌ Ошибка при отправке. Попробуйте снова"
     },
 
     "de": {
@@ -177,8 +177,8 @@ const translations = {
         "cont_form_btn": "Anfrage absenden",
 
         // --- Отправка Заявки ---
-        "cont_form_success": "✅ Danke! Ihre Anfrage wurde erfolgreich gesendet.",
-        "cont_form_error": "❌ Fehler beim Senden. Bitte versuchen Sie es erneut."
+        "cont_form_success": "✅ Danke! Ihre Anfrage wurde erfolgreich gesendet",
+        "cont_form_error": "❌ Fehler beim Senden. Bitte versuchen Sie es erneut"
     },
 
     "en": {
@@ -268,8 +268,8 @@ const translations = {
         "cont_form_btn": "Send Request",
 
         // --- Отправка Заявки ---
-        "cont_form_success": "✅ Thank you! Your request has been sent successfully.",
-        "cont_form_error": "❌ Sending error. Please try again."
+        "cont_form_success": "✅ Thank you! Your request has been sent successfully",
+        "cont_form_error": "❌ Sending error. Please try again"
     }
 
 };
